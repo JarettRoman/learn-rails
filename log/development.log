@@ -1085,3 +1085,38 @@ Processing by VisitorsController#new as HTML
   Rendered layouts/_navigation.html.erb (1.2ms)
   Rendered layouts/_messages.html.erb (0.1ms)
 Completed 200 OK in 152ms (Views: 151.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 01:20:58 -0500
+Processing by VisitorsController#new as HTML
+  Rendered visitors/new.html.erb within layouts/application (79.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 529ms (Views: 488.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2015-01-22 01:21:02 -0500
+Processing by ContactsController#new as HTML
+  Rendered contacts/new.html.erb within layouts/application (48.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 186ms (Views: 183.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/visitors" for 127.0.0.1 at 2015-01-22 01:21:11 -0500
+Processing by VisitorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5eqaY83FUpCrj44jUerif3f1tJT7+/Hp39KkDKO4nCU=", "visitor"=>{"email"=>"afrocious@gmail.com"}, "commit"=>"Sign up for the newsletter!"}
+Subscribed afrocious@gmail.com to Mailchimp.
+Redirected to http://localhost:3000/
+Completed 302 Found in 1028ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 01:21:12 -0500
+Processing by VisitorsController#new as HTML
+  Rendered visitors/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 162ms (Views: 161.5ms | ActiveRecord: 0.0ms)
