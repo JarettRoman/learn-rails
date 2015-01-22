@@ -832,3 +832,94 @@ Processing by VisitorsController#new as HTML
   Rendered layouts/_navigation.html.erb (1.4ms)
   Rendered layouts/_messages.html.erb (0.1ms)
 Completed 200 OK in 263ms (Views: 262.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-21 23:37:30 -0500
+Processing by VisitorsController#new as HTML
+  Rendered visitors/new.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 166ms (Views: 151.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2015-01-21 23:37:32 -0500
+Processing by ContactsController#new as HTML
+  Rendered contacts/new.html.erb within layouts/application (10.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 165ms (Views: 162.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2015-01-21 23:37:51 -0500
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5eqaY83FUpCrj44jUerif3f1tJT7+/Hp39KkDKO4nCU=", "contact"=>{"name"=>"Third Test", "email"=>"foo@foo2.com", "content"=>"Sending email right now!"}, "commit"=>"Submit"}
+  Rendered user_mailer/contact_email.html.erb (22.9ms)
+  Rendered user_mailer/contact_email.text.erb (0.7ms)
+
+UserMailer#contact_email: processed outbound mail in 445.3ms
+
+Sent mail to afrocious@gmail.com (3332.7ms)
+Date: Wed, 21 Jan 2015 23:37:54 -0500
+From: foo@foo2.com
+To: afrocious@gmail.com
+Message-ID: <54c07ea27161_136513fecd651074048792@Jaretts-MacBook-Pro.local.mail>
+Subject: Website Contact
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_54c07ea1f3dfa_136513fecd651074048676";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_54c07ea1f3dfa_136513fecd651074048676
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+You recieved a message from Third Test with email address foo@foo2.com.
+
+The visitor said:
+
+"Sending email right now!"
+----==_mimepart_54c07ea1f3dfa_136513fecd651074048676
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html' charset=UTF-8" http-equiv="Content-Type" />
+</head>
+<body>
+  <h1>Website Contact</h1>
+  <p>
+    This visitor requested contact:
+  </p>
+  <p>
+    Third Test<br />
+    foo@foo2.com<br />
+  </p>
+  <p>
+    The visitor said:
+  </p>
+  <p>
+    "Sending email right now!"
+  </p>
+</body>
+</html>
+----==_mimepart_54c07ea1f3dfa_136513fecd651074048676--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 5519ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-21 23:37:57 -0500
+Processing by VisitorsController#new as HTML
+  Rendered visitors/new.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 152ms (Views: 151.7ms | ActiveRecord: 0.0ms)
